@@ -24,3 +24,12 @@
 - parser(把源码转化成 ast 语法树｜ @babel/parser) ->
 - transform（遍历 AST,对 AST 进行必要的改造 | @babel/traverse 遍历 AST, 最后调用 visitor 修改 ast, | @babel/types 创建 修改 删除 需要用到的 types ）
 - generate: 把改造后的代码，生成目标代码，以及 sourcemap @babel/generate
+
+## 为什么需要模块化
+
+- 变量命名污染
+- 内聚且私有的，不能被外部污染的
+- 对于模块的设计，更加清晰，怎么引入其他模块，怎么暴露接口给其他模块
+- 可以有效解决依赖顺序的问题
+- 多人并行，怎么通过接口，组织方式，来实现代码开发
+- esm ,cjs, amd, cmd, umd
